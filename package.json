@@ -21,8 +21,8 @@
   },
   "homepage": "https://github.com/alexanderkvapel/posmotri-v-okno-fd#readme",
   "description": "",
-  "dependencies": {
-    "prettier": "^3.5.3",
-    "stylelint": "^16.19.1"
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "stylelint": "^16.21.1"
   }
 }

@@ -35,23 +35,15 @@
 }
 
 @keyframes focusfade {
-  0% {
-    opacity: 0.7;
-  }
 
-  30% {
-    opacity: 0.7;
-  }
-
-  60% {
-    opacity: 0;
-  }
-
-  75% {
-    opacity: 0;
-  }
-
+  0%,
+  30%,
   100% {
     opacity: 0.7;
+  }
+
+  60%,
+  75% {
+    opacity: 0;
   }
 }

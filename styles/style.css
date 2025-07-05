@@ -1,4 +1,7 @@
 :root {
+  --main-font: 'Fira Sans Condensed';
+  --accent-font: 'Oswald';
+
   --main-bg-color: #1b1919;
   --main-text-color: #fff;
   --accent-text-color: #545050;
@@ -22,11 +25,11 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  color: var(--main-text-color);
-  font-family: 'Fira Sans Condensed', sans-serif;
+  margin: 0 auto;
+  color: var(--main-text-color, #fff);
+  font-family: var(--main-font, 'Fira Sans Condensed'), sans-serif;
   font-size: 18px;
-  background-color: var(--main-bg-color);
+  background-color: var(--main-bg-color, #1b1919);
   inline-size: 1200px;
   block-size: 100%;
 }
@@ -59,7 +62,7 @@ ol {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: var(--scroll-color);
+  background-color: var(--scroll-color, #d9d9d9);
 }
 
 .visually-hidden {
@@ -115,7 +118,7 @@ ol {
 }
 
 .search-form__label:has(:focus-visible) {
-  outline: 1px solid var(--border-color);
+  outline: 1px solid var(--border-color, #fff);
   outline-offset: 1px;
 }
 
@@ -126,22 +129,22 @@ ol {
 .search-form__textfield {
   width: 225px;
   border: none;
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color, #fff);
   border-right: 1px solid transparent;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color, #fff);
   border-left: 1px solid transparent;
   color: inherit;
   font-family: inherit;
   font-weight: 400;
   font-size: inherit;
-  line-height: 22px;
+  line-height: 1.22;
   background-color: transparent;
   appearance: none;
 }
 
 .search-form__textfield:active {
-  border-right: 1px solid var(--border-color);
-  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color, #fff);
+  border-left: 1px solid var(--border-color, #fff);
 }
 
 .search-form__textfield:focus {
@@ -152,7 +155,7 @@ ol {
   margin-bottom: 5px;
   font-weight: 400;
   font-size: inherit;
-  line-height: 22px;
+  line-height: 1.22;
   cursor: default;
 }
 
@@ -172,7 +175,7 @@ ol {
   width: 19px;
   height: 19px;
   margin-right: 5px;
-  border: 1px solid var(--pseudo-checkbox-color);
+  border: 1px solid var(--pseudo-checkbox-color, #fff);
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
@@ -180,23 +183,23 @@ ol {
   display: block;
   width: 15px;
   height: 15px;
-  background-color: var(--pseudo-checkbox-color);
+  background-color: var(--pseudo-checkbox-color, #fff);
 }
 
 .button {
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-color, #fff);
   padding: 5px 0;
   color: inherit;
   font-family: inherit;
   font-weight: 700;
   font-size: inherit;
-  line-height: 22px;
+  line-height: 1.22;
   background-color: transparent;
   cursor: pointer;
 }
 
 .button:active {
-  background-color: var(--active-bg-color);
+  background-color: var(--active-bg-color, #545050);
 }
 
 .button:hover {
@@ -208,7 +211,7 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 1px solid var(--border-color);
+  outline: 1px solid var(--border-color, #fff);
   outline-offset: 1px;
 }
 
@@ -230,15 +233,15 @@ ol {
 
 .title {
   margin-bottom: 21px;
-  font-family: Oswald, sans-serif;
+  font-family: var(--accent-font, 'Oswald'), sans-serif;
   font-weight: 700;
   font-size: 75px;
-  line-height: 94%;
+  line-height: 0.94;
   text-transform: uppercase;
 }
 
 .content__accent {
-  color: var(--accent-text-color);
+  color: var(--accent-text-color, #545050);
 }
 
 .content__list-container {
@@ -259,7 +262,7 @@ ol {
 }
 
 .content__card-link {
-  color: var(--main-text-color);
+  color: var(--main-text-color, #fff);
   text-decoration: none;
 }
 
@@ -275,11 +278,11 @@ ol {
 
 .content__card-link_current .content__video-card,
 .content__card-link:active .content__video-card {
-  background-color: var(--active-bg-color);
+  background-color: var(--active-bg-color, #545050);
 }
 
 .content__card-link:focus-visible .content__video-card {
-  outline: 1px solid var(--border-color);
+  outline: 1px solid var(--border-color, #fff);
   outline-offset: 1px;
 }
 
@@ -296,10 +299,10 @@ ol {
 .content__video-card-title {
   margin-bottom: 6px;
   overflow: hidden;
-  font-family: Oswald, sans-serif;
+  font-family: var(--accent-font, 'Oswald'), sans-serif;
   font-weight: 700;
   font-size: 30px;
-  line-height: 100%;
+  line-height: 1;
   text-transform: uppercase;
   text-overflow: ellipsis;
 }
@@ -308,7 +311,7 @@ ol {
   display: -webkit-box;
   overflow: hidden;
   font-weight: 400;
-  line-height: 16px;
+  line-height: 0.89;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
 }
